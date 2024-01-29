@@ -6,14 +6,15 @@
 		<style>
 			.box {
 				width: 250px;
-				height: 300px;
+				height: auto;
 				float: left;
 				margin: 30px;
 			}
 
 			.dashed {
 				border: 3px dashed black;
-				padding: 3px;
+
+				padding: 3rem;
 			}
 		</style>
 		<title>Document</title>
@@ -35,11 +36,9 @@
 			</form>
 		</div>
 		<div class="box dashed">
+			<button id="deleteLocal">clear Local Storage</button>
 			<h3>Informacion del usuario</h3>
 			<hr />
-			<p id="nombre">Nombre: <span></span></p>
-			<p id="apellido">Apellido: <span></span></p>
-			<p id="edad">Edad: <span></span></p>
 		</div>
 	</body>
 	<script type="text/javascript" src="index.js"></script>
