@@ -3,22 +3,44 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			.box {
+				width: 250px;
+				height: 300px;
+				float: left;
+				margin: 30px;
+			}
+
+			.dashed {
+				border: 3px dashed black;
+				padding: 3px;
+			}
+		</style>
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>Curso javascript victorroblesweb.es</h1>
-		<p>Nuestro primer Script en JS</p>
-		<div id="micaja" class="caja">Hola soy una caja</div>
-		<div>soy el segundo div</div>
-		<div class="caja">soy la caja 2</div>
-		<div class="caja">soy la caja 3</div>
-		<div>
-			Soy el div 5
-			<div>soy el div 6</div>
+		<div class="box">
+			<form method="post" id="formulario">
+				<br />
+				<label for="nombre">Nombre:</label>
+				<input type="text" name="Nombre" id="nombre" />
+				<br />
+				<label for="apellidos">Apellidos:</label>
+				<input type="text" name="Apellidos" id="apellido" />
+				<br />
+				<label for="edad">Edad:</label>
+				<input type="number" name="Edad" id="edad" />
+				<br />
+				<input type="submit" value="Enviar" />
+			</form>
 		</div>
-		<button id="boton">Botoooon</button>
-		<input type="text" name="text" id="areaPrueba2" />
-		<input type="button" id="stopButton" value="Stop" />
+		<div class="box dashed">
+			<h3>Informacion del usuario</h3>
+			<hr />
+			<p id="nombre">Nombre: <span></span></p>
+			<p id="apellido">Apellido: <span></span></p>
+			<p id="edad">Edad: <span></span></p>
+		</div>
 	</body>
 	<script type="text/javascript" src="index.js"></script>
 </html>
