@@ -3,43 +3,35 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
 		<style>
-			.box {
-				width: 250px;
-				height: auto;
-				float: left;
-				margin: 30px;
+			.grande {
+				font-size: 50px;
 			}
 
-			.dashed {
-				border: 3px dashed black;
-
-				padding: 3rem;
+			.azul {
+				color: rgb(29, 48, 216);
 			}
 		</style>
 		<title>Document</title>
 	</head>
 	<body>
-		<div class="box">
-			<form method="post" id="formulario">
-				<br />
-				<label for="nombre">Nombre:</label>
-				<input type="text" name="Nombre" id="nombre" />
-				<br />
-				<label for="apellidos">Apellidos:</label>
-				<input type="text" name="Apellidos" id="apellido" />
-				<br />
-				<label for="edad">Edad:</label>
-				<input type="number" name="Edad" id="edad" />
-				<br />
-				<input type="submit" value="Enviar" />
-			</form>
+		<h1>JQuery</h1>
+		<div class="rojo">
+			<p>Bloque rojo</p>
+			<p>tener en cuenta que es rojo</p>
 		</div>
-		<div class="box dashed">
-			<button id="deleteLocal">clear Local Storage</button>
-			<h3>Informacion del usuario</h3>
-			<hr />
-		</div>
+		<div class="dashed"><p>esta dashed</p></div>
+		<div class="dashed"><p>Este tambien dashed</p></div>
+		<ul>
+			<li>Item</li>
+			<li>Item</li>
+			<li>Item</li>
+		</ul>
 	</body>
-	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="selectores.js"></script>
 </html>
