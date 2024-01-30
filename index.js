@@ -1,4 +1,3 @@
-let data = localStorage.getItem("usuarios");
 let box_dashed = document.querySelector(".dashed");
 let formulario = document.querySelector("#formulario");
 let deleteStorageButton = document.querySelector("#deleteLocal");
@@ -32,12 +31,6 @@ formulario.addEventListener("submit", (event) => {
 });
 
 box_dashed.style.display = "block";
-
-// function addUser() {
-// 	let row = createRow();
-// 	let contenedor = document.querySelector(".dashed");
-// 	contenedor.insertAdjacentHTML("beforeend", row);
-// }
 
 function persist(usuario) {
 	if (datos) setLocalStorage([...datos, usuario]);
