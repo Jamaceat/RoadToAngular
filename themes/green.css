@@ -1,0 +1,25 @@
+body {
+	background: url(../src/Fondo.png);
+	background-attachment: fixed;
+}
+
+#logo {
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 30px;
+	letter-spacing: 4px;
+	background: #235e3d;
+	color: white;
+	text-align: center;
+	width: 385px;
+	float: left;
+	text-transform: uppercase;
+	margin: 10px 0px;
+}
+
+#menu ul li:hover {
+	background: #235e3d;
+}
+
+.button-more {
+	background: #235e3d;
+}

@@ -1,0 +1,25 @@
+body {
+	background: url(../src/tierra.png);
+	background-attachment: fixed;
+}
+
+#logo {
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 30px;
+	letter-spacing: 4px;
+	background: #ca3413;
+	color: white;
+	text-align: center;
+	width: 385px;
+	float: left;
+	text-transform: uppercase;
+	margin: 10px 0px;
+}
+
+#menu ul li:hover {
+	background: #ca3413;
+}
+
+.button-more {
+	background: #ca3413;
+}

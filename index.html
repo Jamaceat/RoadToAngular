@@ -3,38 +3,80 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script
-			src="https://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous"
-		></script>
-		<style>
-			.grande {
-				font-size: 50px;
-			}
 
-			.azul {
-				color: rgb(29, 48, 216);
-			}
-		</style>
+		<link id="theme" rel="stylesheet" href="themes/green.css" />
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/locale/es.min.js"></script>
 		<title>Document</title>
 	</head>
 	<body>
-		<h1>Aprendiendo JQUERY Ajax</h1>
-		<div class="datos"></div>
-
-		<div class="form">
-			<form
-				id="personaForm"
-				action="http://localhost:80/properties/key-jwt"
-				method="POST"
-			>
-				Nombre :<input type="text" name="name" id="name" /> <br />
-				Job: <input type="text" name="job" id="job" /><br />
-				<input type="submit" value="Enviar" />
-			</form>
+		<div id="change-theme">
+			<div id="to-green"></div>
+			<div id="to-red"></div>
+			<div id="to-blue"></div>
 		</div>
+		<section id="global">
+			<header>
+				<div id="logo">Proyecto JS</div>
+
+				<div class="clearfix"></div>
+				<nav id="menu">
+					<ul>
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Reloj</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="#">Sobre mi</a></li>
+					</ul>
+				</nav>
+
+				<div id="slider">
+					<div class="bxslider">
+						<div><img src="src/Cielo.png" alt="Cielo" /></div>
+						<div><img src="src/tierra.png" alt="Tierra" /></div>
+						<div><img src="src/mar.png" alt="Mar" /></div>
+					</div>
+				</div>
+
+				<section id="content">
+					<div id="post"></div>
+
+					<aside id="sidebar">
+						<div id="about">
+							<h4><span> ¿Quien soy?</span></h4>
+							<img src="src/caracol.png" alt="Un caracol" />
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
+								incidunt aperiam, omnis beatae tempora quia nulla architecto ea
+								distinctio magni consequatur blanditiis, reiciendis ab. At sunt
+								suscipit reprehenderit facere sed!
+							</p>
+						</div>
+
+						<div id="login">
+							<h4><span>Identificate</span></h4>
+							<form action="">
+								<label for="name">Nombre</label>
+								<input type="text" name="name" />
+								<label for="correo">Correo</label>
+								<input type="email" name="correo" />
+								<label for="password">Password</label>
+								<input type="password" name="password" />
+								<input type="submit" value="Enviar" />
+							</form>
+						</div>
+					</aside>
+					<div class="clearfix"></div>
+				</section>
+			</header>
+		</section>
+		<footer>Johan Andres Mendez Macea &copy;</footer>
 	</body>
-	<script type="text/javascript" src="selectores.js"></script>
-	<script type="text/javascript" src="ajax.js"></script>
+	<script src="main.js"></script>
 </html>

@@ -1,0 +1,25 @@
+body {
+	background: url(../src/mar.png);
+	background-attachment: fixed;
+}
+
+#logo {
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 30px;
+	letter-spacing: 4px;
+	background: #1f87c4;
+	color: white;
+	text-align: center;
+	width: 385px;
+	float: left;
+	text-transform: uppercase;
+	margin: 10px 0px;
+}
+
+#menu ul li:hover {
+	background: #1f87c4;
+}
+
+.button-more {
+	background: #1f87c4;
+}
