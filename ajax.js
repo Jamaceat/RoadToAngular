@@ -10,13 +10,48 @@ $(document).ready(function () {
 	$("#personaForm").submit(function (e) {
 		e.preventDefault();
 		let usuario = {
-			name: $('input[name="name"]').val(),
-			job: $('input[name="job"]').val(),
+			lengthKey: +$('input[name="name"]').val(),
+			nameApplication: $('input[name="job"]').val(),
 		};
 
 		console.log(usuario);
-		$.post($(this).attr("action"), usuario, function (response) {
-			console.log(response);
+		// $.post(
+		// 	$(this).attr("action"),
+		// 	JSON.stringify(usuario),
+		// 	function (response) {
+		// 		console.log(response);
+		// 	}
+		// );
+		$.ajaxSetup({
+			crossDomain: false,
+			xhrFields: {
+				withCredentials: false,
+			},
+		});
+
+		$.ajax({
+			type: "POST",
+			crossDomain: false,
+			xhrFields: {
+				withCredentials: false, // Evitar el envío de credenciales
+			},
+			contentType: "application/json; charset=utf-8",
+			dataType: "json",
+			url: $(this).attr("action"),
+			data: JSON.stringify(usuario),
+			beforeSend: function (xhr) {
+				console.log("enviando al usuario");
+				// xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+				// xhr.setRequestHeader("Origin", "localhost");
+				// xhr.withCredentials = true;
+			},
+			success: function (response) {
+				console.log("exito");
+				console.log(response);
+			},
+			error: function (error, bla, otro) {
+				console.log(error, bla, otro);
+			},
 		});
 	});
 });
