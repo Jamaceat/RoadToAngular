@@ -1,5 +1,8 @@
 $(document).ready(function () {
 	// Codigo aqui
+
+	login();
+
 	$(".bxslider").bxSlider({
 		mode: "fade",
 		captions: true,
@@ -86,22 +89,64 @@ $(document).ready(function () {
 	};
 
 	articles.map(articleGenerator).forEach((x) => {
-		console.log(x);
 		$("#post").append(x);
 	});
 
 	let theme = $("#theme");
 
 	$("#to-green").click(function () {
-		console.log("click");
 		theme.attr("href", `themes/green.css`);
 	});
 	$("#to-blue").click(function () {
 		theme.attr("href", `themes/blue.css`);
-		console.log("click");
 	});
 	$("#to-red").click(function () {
-		console.log("click");
 		theme.attr("href", `themes/red.css`);
 	});
+
+	$(".subir").click(function (e) {
+		e.preventDefault();
+		$("html,body").animate({ scrollTop: 0 }, 2000);
+
+		return false;
+	});
+
+	$("#login form").submit(function (e) {
+		e.preventDefault();
+		let name = $("#form_name").val();
+		let email = $("#form_email").val();
+		let password = $("#form_password").val();
+		localStorage.setItem("user", JSON.stringify({ name, email, password }));
+		login();
+	});
+
+	$("#logout").click(function (e) {
+		e.preventDefault();
+		console.log("click logout");
+		localStorage.clear();
+		$("#about p").show();
+		$("#login").toggle();
+		$("#logout").toggle();
+		$("#user_logged").toggle();
+
+		login();
+	});
 });
+
+// --------------------------- login
+
+function login() {
+	let userInfo = JSON.parse(localStorage.getItem("user"));
+	console.log(userInfo);
+	if (userInfo) {
+		// $("#about p").toggle();
+		$("#user_logged strong").html(userInfo.name);
+		$("#user_logged").toggle();
+
+		$("#about").prepend();
+
+		$("#login").toggle();
+
+		$("#logout").toggle();
+	}
+}

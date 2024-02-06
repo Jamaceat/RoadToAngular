@@ -51,23 +51,25 @@
 						<div id="about">
 							<h4><span> ¿Quien soy?</span></h4>
 							<img src="src/caracol.png" alt="Un caracol" />
+							<p id="user_logged">Hola, <strong></strong><p/></br>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
 								incidunt aperiam, omnis beatae tempora quia nulla architecto ea
 								distinctio magni consequatur blanditiis, reiciendis ab. At sunt
 								suscipit reprehenderit facere sed!
 							</p>
+						</br><a href="#" id="logout">Cerrar sesion<a/>
 						</div>
 
 						<div id="login">
 							<h4><span>Identificate</span></h4>
 							<form action="">
 								<label for="name">Nombre</label>
-								<input type="text" name="name" />
+								<input type="text" name="name" id="form_name" />
 								<label for="correo">Correo</label>
-								<input type="email" name="correo" />
+								<input type="email" name="correo" id="form_email" />
 								<label for="password">Password</label>
-								<input type="password" name="password" />
+								<input type="password" name="password" id="form_password" />
 								<input type="submit" value="Enviar" />
 							</form>
 						</div>
@@ -76,7 +78,11 @@
 				</section>
 			</header>
 		</section>
-		<footer>Johan Andres Mendez Macea &copy;</footer>
+		<footer>
+			Johan Andres Mendez Macea &copy;
+
+			<a href="#" class="subir">Ir arriba</a>
+		</footer>
 	</body>
 	<script src="main.js"></script>
 </html>

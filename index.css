@@ -39,6 +39,11 @@
 	background-color: #ca3413;
 }
 
+#subir {
+	color: white;
+	text-decoration: none;
+}
+
 body {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -202,4 +207,11 @@ footer {
 .bx-wrapper,
 .bx-viewport {
 	height: 250px !important;
+}
+
+/* -------------------------------------- */
+
+#logout,
+#user_logged {
+	display: none;
 }
