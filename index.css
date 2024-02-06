@@ -215,3 +215,25 @@ footer {
 #user_logged {
 	display: none;
 }
+
+/* ------------------ */
+
+#box {
+	width: 60%;
+	float: left;
+	margin-top: 40px;
+}
+
+/* ------------------------- Reloj */
+
+#reloj {
+	font-size: 40px;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: center;
+	color: #333;
+	border: 5px dashed #333;
+	width: 30%;
+	padding: 40px;
+	margin: 0 auto;
+}
