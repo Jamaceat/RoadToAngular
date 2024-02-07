@@ -11,10 +11,16 @@
 			href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
 		/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!-- Validacion -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
+		<!-- jquery ui -->
         <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.min.css">
         <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.structure.css">
         <link rel="stylesheet" href="../jquery-ui-1.13.2.custom/jquery-ui.theme.min.css">
         <script type="text/javascript" src="../jquery-ui-1.13.2.custom/jquery-ui.min.js"></script>
+
 
 
 		<title>About me</title>
@@ -35,8 +41,8 @@
 					<ul>
 						<li><a href="../index.html">Inicio</a></li>
 						<li><a href="Reloj.html">Reloj</a></li>
-						<li><a href="Contactos.html">Contacto</a></li>
-						<li><a href="#">Sobre mi</a></li>
+						<li><a href="#">Contacto</a></li>
+						<li><a href="./About.html">Sobre mi</a></li>
 					</ul>
 				</nav>
 
@@ -44,57 +50,37 @@
 
 				<section id="content">
 					<div id="box">
-                        <h2>Sobre mí</h2>
 
-                        <div id="acordeon">
-                            <h3>¿Quienes somos?</h3>
-                            <div>
+						<h2>Contacto</h2>
+						<form action="" method="POST" id="form_contact" >
+							<label for="name">Nombre</label>
+							<input data-validation="alphanumeric" type="text" name="name" id="">
 
-								<p>
+							<label for="surname">Apellido</label>
+							<input data-validation="alphanumeric" type="text" name="surname" id="">
 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Aliquam voluptas quae omnis ipsa necessitatibus explicabo sint eius?
-                                    Eveniet numquam veniam quaerat eaque magnam blanditiis vitae, aut 
-                                    quisquam consequatur ducimus ad?
-                            </p>
-                            </div>
-                            <h3>¿Que hacemos?</h3>
-                            <div>
+							<label for="email">Email</label>
+							<input data-validation="email" type="email" name="email" id="">
 
-								<p>
 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Aliquam voluptas quae omnis ipsa necessitatibus explicabo sint eius?
-                                    Eveniet numquam veniam quaerat eaque magnam blanditiis vitae, aut 
-                                    quisquam consequatur ducimus ad?
-                            </p>
-                            </div>
-                            <h3>Vision</h3>
-                            <div>
 
-								<p>
 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Aliquam voluptas quae omnis ipsa necessitatibus explicabo sint eius?
-                                    Eveniet numquam veniam quaerat eaque magnam blanditiis vitae, aut 
-                                    quisquam consequatur ducimus ad?
-                            </p>
-                            </div>
-                            <h3>Mision</h3>
-                            <div>
+							<label for="sexo">Sexo</label>
+							<select data-validation="required" name="sexo" id="">
+								<option value="man">Hombre</option>
+								<option value="woman">Mujer</option>
+							</select>
+							<label  for="date">Fecha de nacimiento</label>
+							<input  data-validation="date" data-validation-format="dd-mm-yyyy" type="text" name="date" id="">
 
-								<p>
 
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Aliquam voluptas quae omnis ipsa necessitatibus explicabo sint eius?
-                                    Eveniet numquam veniam quaerat eaque magnam blanditiis vitae, aut 
-                                    quisquam consequatur ducimus ad?
-                            </p>
-                            </div>
+							<label for="edad">Edad</label>
+							<input type="number" name="edad" id="" data-validation="number">
 
-                        </div>
-                    
-                    </div>
+							<input type="submit" value="enviar">
+						</form>
+
+					</div>
 
 					<aside id="sidebar" aria-label="Lateral">
 						<div id="about">

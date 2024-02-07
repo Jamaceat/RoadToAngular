@@ -170,6 +170,8 @@ $(document).ready(function () {
 	}
 
 	if (window.location.href.indexOf(`Contactos`) > -1) {
+		$(`form input[name='date']`).datepicker({ dateFormat: "dd-mm-yy" });
+		$.validate({ lang: "es" });
 	}
 });
 
